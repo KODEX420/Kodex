@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(40,1,55,.8), rgba(64,1,1,.7)),
+        url(fuckno.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+h1 {
+    color: black;
+    font-size: 48px;
+
+    text-shadow:
+        -2px -2px 0 purple,
+         2px -2px 0 white,
+        -2px  2px 0 white,
+         2px  2px 0 white;
+}
+
+h2 {
+    color: black;
+
+    text-shadow:
+        -2px -2px 0 purple,
+         2px -2px 0 white,
+        -2px  2px 0 white,
+         2px  2px 0 white;
+}
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+.album-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+.album-info {
+    width: 500px;
+}
+
+#cover {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    border: 5px solid gainsboro;
+    border-radius: 20px;
+    box-shadow: 0 0 30px purple;
+    transition: 0.3s;
+}
+#cover:hover {
+    transform: scale(1.03);
+}
+
+#title {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+#year {
+    color: cyan;
+}
+
+.arrow {
+    background: transparent;
+    color: white;
+
+    border: none;
+
+    font-size: 60px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    color: purple;
+    transform: scale(1.2);
+}
+
+#songs {
+    text-align: left;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border: 2px solid purple;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#songs li {
+    margin: 8px;
+    color: cyan;
+}
+
+body > a {
+    color: purple;
+
+    font-size: 20px;
+
+    text-decoration: none;
+}
+
+body > a:hover {
+    color: white;
+}
