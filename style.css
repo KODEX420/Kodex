@@ -1,17 +1,24 @@
 body {
-    background-image: 
-        linear-gradient(rgba(40,1,55,0.75), rgba(40,1,55,0.2)),
-        url(fuckno.jpeg);
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    --gradient-opacity: 0.75;
+
+    background:
+        linear-gradient(
+            rgba(40, 1, 55, var(--gradient-opacity)),
+            rgba(64, 1, 1, var(--gradient-opacity)),
+            rgba(112, 44, 12, var(--gradient-opacity))
+        ),
+        url("./fuckno.jpeg") center / cover no-repeat fixed;
+
     font-family: "Permanent Marker", cursive;
     margin: 40px;
 }
+/* Header 1 styles for the main content */
 h1{
     color: black;
     font-size: 48px;
+    position: relative;
+    animation:glitch 1s infinite;
+
     text-align: center;
     margin-bottom: 5px;
     text-shadow:
@@ -20,12 +27,26 @@ h1{
         -2px  2px 0 white,
          2px  2px 0 white;
 }
+/* Header 2 styles for the main content: styles for h2 elements */
 h2 {
     color:black;
-    border: 3px solid black;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 10px;
+    position: relative;
+    animation:glitch 1s infinite;
+    text-shadow:
+        -2px -2px 0 purple,
+         2px -2px 0 white,
+        -2px  2px 0 white,
+         2px  2px 0 white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+/* Header 3 styles for the main content: styles for h3 elements */
+h3 {
+    color:black;
+    position: relative;
+    animation:glitch 1s infinite;
+
     text-shadow:
         -2px -2px 0 purple,
          2px -2px 0 white,
@@ -34,7 +55,8 @@ h2 {
     text-align: center;
     margin-top: 0;
 }
-h3 {
+/* Header 4 styles for the main content: styles for h4 elements */
+h4 {
     color:black;
     border-top: 2px solid rgb(204, 0, 255);
     border-bottom: 2px solid rgb(204, 0, 255);
@@ -46,37 +68,69 @@ h3 {
     text-align: center;
     margin-top: 0;
 }
+h5 {
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Paragraph styles for the main content */
 p {
     font-size: 18px;
     line-height: 1.5;
-    color: rgb(255, 0, 0);
+    color: cyan;
+    text-align: center;
 }
+/* Link styles for the main content */
 a {
+    display:block;
+    text-align: center;
+    margin: 0 auto;
     transition: 0.3s;
-    
+    color: rgba(112, 44, 12, 1);
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
 }
+/* Link hover styles for the main content */
 a:hover {
     color: white;
     text-shadow: 2px 2px 0 black;
 }
+/* Image styles for the main content */
 img {
     width: 400px;
     border: 5px solid gainsboro;
     border-radius: 20px;
     transition: 0.3s;
 }
+/* Image hover styles for the main content */
 img:hover {
     border-radius: 5px;
     transform: scale(1.05);
 }
+/* List styles for the main content */
 li {
     color: rebeccapurple;
-    margin: 10px;
+    margin: 25px;
+    border: 2px solid purple;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 5px
 }
+/* Unordered list styles for the main content */
 ul {
     display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    list-style: none;
     
 }
+/* Button styles for the main content */
 button {
     background-color: cornflowerblue;
     border: 3px solid black;
@@ -87,58 +141,16 @@ button {
     transition: 0.3s;
 
 }
+/* Button hover styles for the main content */
 button:hover {
     background-color: white;
     transform: scale(1.05);
 }
-blockquote{
-    color: whitesmoke; 
-
-}
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.7);
-
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    position: relative;
-
-    background-color: rgba(40, 1, 55, 0.95);
-
-    border: 4px solid black;
-    border-radius: 20px;
-
-    padding: 30px;
-    width: 400px;
-
-    text-align: center;
-
-    box-shadow: 0 0 30px purple;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    background-color: transparent;
-    color: white;
-
-    border: none;
-
-    font-size: 20px;
-}
-
-#voidEnterBtn {
-    background-color: purple;
-    color: white;
+/* Blockquote styles for the main content */
+blockquote {
+    background: linear-gradient(to right, #590016, #FF7700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.5px black;
 }
